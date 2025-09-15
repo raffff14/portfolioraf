@@ -1,0 +1,88 @@
+import React from 'react';
+import { Mail, MapPin, Phone, Clock } from 'lucide-react';
+import { ContactForm } from '../components/ContactForm';
+
+export function Contact() {
+  return (
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              Get In Touch
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Let's discuss your next project or just say hello
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Info */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+                  Let's Connect
+                </h3>
+                <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
+                  I'm always interested in hearing about new opportunities and exciting projects. 
+                  Whether you have a question or just want to say hi, feel free to reach out!
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+                    <Mail className="text-blue-600 dark:text-blue-400" size={24} />
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-900 dark:text-white">Email</p>
+                    <p className="text-gray-600 dark:text-gray-400">john.doe@example.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900 rounded-lg flex items-center justify-center">
+                    <Phone className="text-emerald-600 dark:text-emerald-400" size={24} />
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-900 dark:text-white">Phone</p>
+                    <p className="text-gray-600 dark:text-gray-400">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center">
+                    <MapPin className="text-purple-600 dark:text-purple-400" size={24} />
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-900 dark:text-white">Location</p>
+                    <p className="text-gray-600 dark:text-gray-400">San Francisco, CA</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-lg flex items-center justify-center">
+                    <Clock className="text-orange-600 dark:text-orange-400" size={24} />
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-900 dark:text-white">Response Time</p>
+                    <p className="text-gray-600 dark:text-gray-400">Usually within 24 hours</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+                Send a Message
+              </h3>
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
