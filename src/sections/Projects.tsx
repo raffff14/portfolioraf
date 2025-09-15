@@ -67,14 +67,14 @@ export function Projects() {
             <h3 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">Koala AI Internship Gallery</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                './public/KoalaAiGeneratedImages-Internship/best_adventure_brands_in_singapore.jpg',
-                './public/KoalaAiGeneratedImages-Internship/best_afternoon_tea_spots_in_singapore.jpg',
-                './public/KoalaAiGeneratedImages-Internship/best_alteration_services_in_singapore.jpg',
-                './public/KoalaAiGeneratedImages-Internship/best_apple_cider_vinegar_brands_in_singapore.jpg',
-                './public/KoalaAiGeneratedImages-Internship/best_brunch_spots_in_singapore.jpg',
-                './public/KoalaAiGeneratedImages-Internship/best_cafes_in_the_east_of_singapore.jpg',
-                './public/KoalaAiGeneratedImages-Internship/best_clinics_for_lasik_eye_surgery_in_singapore.jpg',
-                './public/KoalaAiGeneratedImages-Internship/best_cupcake_bakeries_in_singapore.jpg'
+                '/KoalaAiGeneratedImages-Internship/best_adventure_brands_in_singapore.jpg',
+                '/KoalaAiGeneratedImages-Internship/best_afternoon_tea_spots_in_singapore.jpg',
+                '/KoalaAiGeneratedImages-Internship/best_alteration_services_in_singapore.jpg',
+                '/KoalaAiGeneratedImages-Internship/best_apple_cider_vinegar_brands_in_singapore.jpg',
+                '/KoalaAiGeneratedImages-Internship/best_brunch_spots_in_singapore.jpg',
+                '/KoalaAiGeneratedImages-Internship/best_cafes_in_the_east_of_singapore.jpg',
+                '/KoalaAiGeneratedImages-Internship/best_clinics_for_lasik_eye_surgery_in_singapore.jpg',
+                'KoalaAiGeneratedImages-Internship/best_cupcake_bakeries_in_singapore.jpg'
               ].map((img, idx) => (
                 <img
                   key={img}
