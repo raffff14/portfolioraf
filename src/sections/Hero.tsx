@@ -18,7 +18,7 @@ export function Hero() {
       <div className="container mx-auto px-4 text-center z-10">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8 animate-fade-in">
-            <div className="w-32 h-32 mx-auto mb-6 mt-20 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 p-1">
+            <div className="w-40 h-55 mx-auto mb-6 mt-20 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 p-1">
               <img
                 src="/portfolioraf/public/ProfilePictureRafhael.jpg"
                 alt="Rafhael Malabanan"
