@@ -3,10 +3,9 @@ import { Github, Linkedin, Twitter, Mail, Heart, ArrowUp } from 'lucide-react';
 
 export function Footer() {
   const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com', icon: Github },
-    { name: 'LinkedIn', href: 'https://linkedin.com', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com', icon: Twitter },
-    { name: 'Email', href: 'mailto:john.doe@example.com', icon: Mail }
+    { name: 'GitHub', href: 'https://github.com/raffff14', icon: Github },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/rafhael-malabanan-780305307', icon: Linkedin },
+    { name: 'Email', href: 'mailto:rafhaelmalabanan1@gmail.com', icon: Mail }
   ];
 
   const scrollToTop = () => {
@@ -20,7 +19,7 @@ export function Footer() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* Brand */}
             <div>
-              <h3 className="text-2xl font-bold mb-4">John Doe</h3>
+              <h3 className="text-2xl font-bold mb-4">Rafhael Malabanan</h3>
               <p className="text-gray-400 mb-4">
                 Full Stack Developer crafting digital experiences with passion and precision.
               </p>
@@ -80,7 +79,7 @@ export function Footer() {
 
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 flex items-center gap-1">
-              © 2025 John Doe. Made with <Heart size={16} className="text-red-500" /> using React & Tailwind CSS
+              © 2025 Rafhael Malabanan. Made with <Heart size={16} className="text-red-500" /> using React & Tailwind CSS
             </p>
             
             <button

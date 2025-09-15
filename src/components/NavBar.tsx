@@ -40,7 +40,7 @@ export function NavBar() {
           <div className="flex items-center gap-2">
             <Code className="text-blue-600 dark:text-blue-400" size={28} />
             <span className="text-xl font-bold text-gray-900 dark:text-white">
-              John Doe
+              Rafhael Malabanan
             </span>
           </div>
 

@@ -11,18 +11,18 @@ import { Footer } from './sections/Footer';
 function App() {
   useEffect(() => {
     // Update document title
-    document.title = 'John Doe - Full Stack Developer & AI Enthusiast';
+    document.title = 'Rafhael Malabanan - Full Stack Developer & AI Enthusiast';
     
     // Add meta tags for SEO
     const metaTags = [
-      { name: 'description', content: 'John Doe - Full Stack Developer specializing in React, Node.js, Python, and AI solutions. Building scalable web applications and innovative digital experiences.' },
-      { name: 'keywords', content: 'full stack developer, web developer, react, node.js, python, AI, machine learning, portfolio' },
-      { name: 'author', content: 'John Doe' },
-      { property: 'og:title', content: 'John Doe - Full Stack Developer Portfolio' },
+      { name: 'description', content: 'Rafhael Malabanan - Full Stack Developer specializing in React, Node.js, Python, and AI solutions. Building scalable web applications and innovative digital experiences.' },
+      { name: 'keywords', content: 'rafhael malabanan, full stack developer, web developer, react, node.js, python, AI, machine learning, portfolio' },
+      { name: 'author', content: 'Rafhael Malabanan' },
+      { property: 'og:title', content: 'Rafhael Malabanan - Full Stack Developer Portfolio' },
       { property: 'og:description', content: 'Explore my portfolio featuring web development, AI projects, and data analytics solutions.' },
       { property: 'og:type', content: 'website' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'John Doe - Full Stack Developer' },
+      { name: 'twitter:title', content: 'Rafhael Malabanan - Full Stack Developer' },
       { name: 'twitter:description', content: 'Full Stack Developer & AI Enthusiast crafting innovative digital solutions.' }
     ];
 

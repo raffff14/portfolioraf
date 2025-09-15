@@ -12,26 +12,13 @@ export function About() {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Passionate developer with a love for creating innovative solutions
+              I’m Rafhael Malabanan, an aspiring front-end developer with additional experience in back-end development and data analysis. During my internship and role as an AI Specialist at Kaizenaire, I worked on projects involving SEO optimization, leveraging tools like Ahrefs and SEMrush to improve online visibility.<br /><br />
+              I also have experience with Power BI, where I analyzed and visualized data to support business decisions, including insights from our family business. My passion lies in building user-friendly, responsive web applications and exploring how AI and data can enhance digital experiences.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                With over 3 years of experience in full-stack development, I specialize in creating 
-                robust web applications using modern technologies like React, Node.js, and Python. 
-                My journey in tech started with a curiosity about how things work, and it has evolved 
-                into a passion for building solutions that make a real impact.
-              </p>
-              
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                I'm particularly interested in the intersection of web development and artificial intelligence, 
-                constantly exploring how AI can enhance user experiences and streamline business processes. 
-                When I'm not coding, you'll find me contributing to open-source projects or mentoring 
-                aspiring developers.
-              </p>
-
               <div className="grid grid-cols-2 gap-4 pt-6">
                 <div className="flex items-center gap-3">
                   <Code className="text-blue-600 dark:text-blue-400" size={24} />

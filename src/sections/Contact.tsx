@@ -17,7 +17,7 @@ export function Contact() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
@@ -37,7 +37,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900 dark:text-white">Email</p>
-                    <p className="text-gray-600 dark:text-gray-400">john.doe@example.com</p>
+                    <p className="text-gray-600 dark:text-gray-400">rafhaelmalabanan1@gmail.com</p>
                   </div>
                 </div>
 
@@ -47,17 +47,17 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900 dark:text-white">Phone</p>
-                    <p className="text-gray-600 dark:text-gray-400">+1 (555) 123-4567</p>
+                    <p className="text-gray-600 dark:text-gray-400">09917113982 (Dito SIM), 09626714832 (Smart)</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center">
-                    <MapPin className="text-purple-600 dark:text-purple-400" size={24} />
+                  <div className="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-lg flex items-center justify-center">
+                    <MapPin className="text-red-600 dark:text-red-400" size={24} />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900 dark:text-white">Location</p>
-                    <p className="text-gray-600 dark:text-gray-400">San Francisco, CA</p>
+                    <p className="font-medium text-gray-900 dark:text-white">Address</p>
+                    <a href="https://maps.google.com/?q=Angeles+Pampanga" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 underline">Angeles, Pampanga</a>
                   </div>
                 </div>
 

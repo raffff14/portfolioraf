@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDown, Download, Mail } from 'lucide-react';
+import { ChevronDown, Download, Mail, Users, Award, GraduationCap } from 'lucide-react';
 import { Button } from '../components/Button';
 
 export function Hero() {
@@ -18,10 +18,10 @@ export function Hero() {
       <div className="container mx-auto px-4 text-center z-10">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8 animate-fade-in">
-            <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 p-1">
+            <div className="w-32 h-32 mx-auto mb-6 mt-20 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 p-1">
               <img
-                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
-                alt="John Doe"
+                src="/ProfilePictureRafhael.jpg"
+                alt="Rafhael Malabanan"
                 className="w-full h-full rounded-full object-cover"
               />
             </div>
@@ -29,7 +29,7 @@ export function Hero() {
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-4">
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                John Doe
+                Rafhael Malabanan
               </span>
             </h1>
             
@@ -63,17 +63,50 @@ export function Hero() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-12 animate-fade-in-delay-2">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">3+</div>
-              <div className="text-gray-600 dark:text-gray-400">Years Experience</div>
+            {/* Organizations Card */}
+            <div tabIndex={0} className="group bg-white/80 dark:bg-gray-900/80 rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 focus:shadow-2xl focus:-translate-y-1 cursor-pointer outline-none animate-fade-in" aria-label="Organizations">
+              <div className="flex flex-col items-center">
+                <Users className="text-blue-600 dark:text-blue-400 mb-2" size={32} />
+                <div className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-2">Organizations</div>
+                <div className="text-gray-600 dark:text-gray-400 text-sm group-focus:max-h-96 group-hover:max-h-96 max-h-24 overflow-hidden transition-all duration-300">
+                  <ul className="list-disc list-inside text-left mx-auto max-w-xs">
+                  <li><strong>League of Outstanding Programmer</strong><br /><span className="text-xs">Member 2021 – 2024, Angeles, Philippines</span></li>
+                  <li className="mt-2"><strong>Google Developer Student Clubs</strong><br /><span className="text-xs">Member 2021 – 2024, Angeles, Philippines</span></li>
+                </ul>
+                </div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-2">50+</div>
-              <div className="text-gray-600 dark:text-gray-400">Projects Completed</div>
+            {/* Certificates Card */}
+            <div tabIndex={0} className="group bg-white/80 dark:bg-gray-900/80 rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 focus:shadow-2xl focus:-translate-y-1 cursor-pointer outline-none animate-fade-in" aria-label="Certificates">
+              <div className="flex flex-col items-center">
+                <Award className="text-purple-600 dark:text-purple-400 mb-2" size={32} />
+                <div className="text-xl font-bold text-purple-600 dark:text-purple-400 mb-2">Certificates</div>
+                <div className="text-gray-600 dark:text-gray-400 text-sm group-focus:max-h-96 group-hover:max-h-96 max-h-24 overflow-hidden transition-all duration-300">
+                  <ul className="list-disc list-inside text-left mx-auto max-w-xs">
+                  <li>AWS Academy Cloud Foundations</li>
+                  <li>Introduction to Cybersecurity</li>
+                  <li>Cyber Ops Associate</li>
+                  <li>Introduction to IoT</li>
+                  <li>Critical Thinking for More Effective Communication</li>
+                  <li>Advance Python</li>
+                  <li>SQL for Data Analysis</li>
+                  <li>Communication Foundations</li>
+                </ul>
+                </div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">20+</div>
-              <div className="text-gray-600 dark:text-gray-400">Happy Clients</div>
+            {/* Education Card */}
+            <div tabIndex={0} className="group bg-white/80 dark:bg-gray-900/80 rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 focus:shadow-2xl focus:-translate-y-1 cursor-pointer outline-none animate-fade-in" aria-label="Education">
+              <div className="flex flex-col items-center">
+                <GraduationCap className="text-emerald-600 dark:text-emerald-400 mb-2" size={32} />
+                <div className="text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">Education</div>
+                <div className="text-gray-600 dark:text-gray-400 text-sm group-focus:max-h-96 group-hover:max-h-96 max-h-24 overflow-hidden transition-all duration-300">
+                  <ul className="list-disc list-inside text-left mx-auto max-w-xs">
+                    <li><strong>Bachelor of Science in Computer Science</strong><br /><span className="text-xs">Holy Angel University, 5x Dean's Lister, 2021 – 2025, Angeles, Philippines</span></li>
+                    <li className="mt-2"><strong>Holy Family Academy</strong><br /><span className="text-xs">2015 – 2021, Angeles, Philippines</span></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -84,7 +117,7 @@ export function Hero() {
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors animate-bounce"
         aria-label="Scroll to About section"
       >
-        <ChevronDown size={32} />
+
       </button>
     </section>
   );

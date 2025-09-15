@@ -3,32 +3,52 @@ import { Project } from '../types';
 export const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, shopping cart, and secure payments.",
-    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg",
-    tags: ["React", "Node.js", "MongoDB", "Stripe", "Express"],
+    title: "Angelite Forecast",
+    description: "A weather forecasting app using advanced data visualization and prediction models.",
+    image: "/Project1-images-Angeliteforecast/image.png",
+    tags: ["React", "API", "Visualization"],
     category: "Web Dev",
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/example"
+    demoUrl: "#",
+    githubUrl: "#"
   },
   {
     id: 2,
-    title: "AI Content Generator",
-    description: "An AI-powered content generation tool that creates blog posts, social media content, and marketing copy using advanced language models and natural language processing.",
-    image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg",
-    tags: ["Python", "TensorFlow", "OpenAI", "FastAPI", "React"],
-    category: "AI",
-    demoUrl: "https://ai-demo.example.com",
-    githubUrl: "https://github.com/ai-example"
+    title: "NFT Gacha",
+    description: "A blockchain-based NFT gacha game with interactive UI and video previews.",
+    image: "/Project2-images-videos-NFTGacha/nftgacha.png",
+    tags: ["Blockchain", "NFT", "Game"],
+    category: "Web Dev",
+    demoUrl: "/Project2-images-videos-NFTGacha/nft.mp4",
+    githubUrl: "#"
   },
   {
     id: 3,
-    title: "Sales Analytics Dashboard",
-    description: "Interactive data visualization dashboard for sales analytics with real-time metrics, forecasting, and customizable reports. Built with modern data visualization libraries.",
-    image: "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg",
-    tags: ["Python", "Pandas", "Plotly", "Streamlit", "PostgreSQL"],
+    title: "Process Scheduling Partition",
+    description: "Visualization of OS process scheduling and partitioning algorithms.",
+    image: "/Project3-images-ProcessSchedulingPartition/opsysfunn.png",
+    tags: ["OS", "Visualization", "Education"],
     category: "Data",
-    demoUrl: "https://analytics.example.com",
-    githubUrl: "https://github.com/analytics-example"
+    demoUrl: "#",
+    githubUrl: "#"
+  },
+  {
+    id: 4,
+    title: "Think Fast",
+    description: "A fast-paced quiz and reaction game with video demo.",
+    image: "/Project4-images-videos-ThinkFast/thinkfast.png",
+    tags: ["Game", "Quiz", "React"],
+    category: "Web Dev",
+    demoUrl: "/Project4-images-videos-ThinkFast/flutter.mp4",
+    githubUrl: "#"
+  },
+  {
+    id: 5,
+    title: "UberStock",
+    description: "A stock image search and management platform.",
+    image: "/Project5-images-UberStock/uberstock.png",
+    tags: ["Search", "Images", "Platform"],
+    category: "Web Dev",
+    demoUrl: "/Project5-images-UberStock/uberstock.jpg",
+    githubUrl: "#"
   }
 ];

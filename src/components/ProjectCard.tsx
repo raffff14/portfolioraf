@@ -20,15 +20,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <Button 
             variant="outline" 
             size="sm" 
-            icon={ExternalLink} 
-            href={project.demoUrl}
-            className="bg-white/20 backdrop-blur-md border-white/30 text-white hover:bg-white/30"
-          >
-            Demo
-          </Button>
-          <Button 
-            variant="outline" 
-            size="sm" 
             icon={Github} 
             href={project.githubUrl}
             className="bg-white/20 backdrop-blur-md border-white/30 text-white hover:bg-white/30"
