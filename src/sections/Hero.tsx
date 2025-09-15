@@ -20,7 +20,7 @@ export function Hero() {
           <div className="mb-8 animate-fade-in">
             <div className="w-32 h-32 mx-auto mb-6 mt-20 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 p-1">
               <img
-                src="./public/ProfilePictureRafhael.jpg"
+                src="/portfolioraf/public/ProfilePictureRafhael.jpg"
                 alt="Rafhael Malabanan"
                 className="w-full h-full rounded-full object-cover"
               />
