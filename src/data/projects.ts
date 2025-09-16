@@ -9,7 +9,7 @@ export const projects: Project[] = [
     tags: ["React", "API", "Visualization"],
     category: "Web Dev",
     demoUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/VurnKambal/AngeliteForecast/tree/master"
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const projects: Project[] = [
     tags: ["Blockchain", "NFT", "Game"],
     category: "Web Dev",
     demoUrl: "/portfolioraf/Project2-images-videos-NFTGacha/nft.mp4",
-    githubUrl: "#"
+    githubUrl: "https://github.com/VurnKambal/InvocationCloud"
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     tags: ["OS", "Visualization", "Education"],
     category: "Data",
     demoUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/raffff14/Opsysfun"
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const projects: Project[] = [
     tags: ["Game", "Quiz", "React"],
     category: "Web Dev",
     demoUrl: "/portfolioraf/Project4-images-videos-ThinkFast/flutter.mp4",
-    githubUrl: "#"
+    githubUrl: "https://github.com/VurnKambal/Appdev"
   },
   {
     id: 5,
@@ -49,6 +49,6 @@ export const projects: Project[] = [
     tags: ["Search", "Images", "Platform"],
     category: "Web Dev",
     demoUrl: "/portfolioraf/Project5-images-UberStock/uberstock.jpg",
-    githubUrl: "#"
+    githubUrl: "https://github.com/raffff14/Uberstock"
   }
 ];
