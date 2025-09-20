@@ -1,4 +1,5 @@
 import React from 'react';
+import { Code, Database, Cloud, Palette, Terminal, Globe, Layers, Zap, BarChart3, FileSpreadsheet, Table, GitBranch, Container, Server, Figma, Monitor } from 'lucide-react';
 import { skills } from '../data/skills';
 
 export function Skills() {
@@ -15,9 +16,33 @@ export function Skills() {
   };
 
   const categoryColors = {
-    frontend: 'from-blue-500 to-purple-500',
-    backend: 'from-green-500 to-teal-500',
-    tools: 'from-orange-500 to-red-500'
+    frontend: 'text-blue-600 dark:text-blue-400',
+    backend: 'text-green-600 dark:text-green-400',
+    tools: 'text-orange-600 dark:text-orange-400'
+  };
+
+  const getSkillIcon = (skillName: string) => {
+    const iconMap: { [key: string]: React.ReactNode } = {
+      'React': <Code className="w-8 h-8" />,
+      'TypeScript': <Terminal className="w-8 h-8" />,
+      'Tailwind CSS': <Palette className="w-8 h-8" />,
+      'Next.js': <Globe className="w-8 h-8" />,
+      'Vue.js': <Layers className="w-8 h-8" />,
+      'Node.js': <Server className="w-8 h-8" />,
+      'Python': <Zap className="w-8 h-8" />,
+      'PostgreSQL': <Database className="w-8 h-8" />,
+      'MongoDB': <Database className="w-8 h-8" />,
+      'GraphQL': <BarChart3 className="w-8 h-8" />,
+      'Git': <GitBranch className="w-8 h-8" />,
+      'Docker': <Container className="w-8 h-8" />,
+      'AWS': <Cloud className="w-8 h-8" />,
+      'Figma': <Figma className="w-8 h-8" />,
+      'VS Code': <Monitor className="w-8 h-8" />,
+      'Power BI': <BarChart3 className="w-8 h-8" />,
+      'Excel': <FileSpreadsheet className="w-8 h-8" />,
+      'Tableau': <Table className="w-8 h-8" />
+    };
+    return iconMap[skillName] || <Code className="w-8 h-8" />;
   };
 
   return (
@@ -37,31 +62,19 @@ export function Skills() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
               <div key={category} className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
+                <h3 className={`text-xl font-semibold ${categoryColors[category as keyof typeof categoryColors]} mb-6 text-center`}>
                   {categoryTitles[category as keyof typeof categoryTitles]}
                 </h3>
                 
-                <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
                   {categorySkills.map((skill) => (
-                    <div key={skill.name} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-gray-700 dark:text-gray-300 font-medium">
-                          {skill.name}
-                        </span>
-                        <span className="text-sm text-gray-500 dark:text-gray-400">
-                          {skill.level}%
-                        </span>
+                    <div key={skill.name} className="flex flex-col items-center p-4 rounded-lg bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">
+                      <div className={`${categoryColors[category as keyof typeof categoryColors]} mb-2`}>
+                        {getSkillIcon(skill.name)}
                       </div>
-                      
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                        <div
-                          className={`h-2 rounded-full bg-gradient-to-r ${categoryColors[category as keyof typeof categoryColors]} transition-all duration-1000 ease-out`}
-                          style={{ 
-                            width: `${skill.level}%`,
-                            animation: 'skillProgress 1.5s ease-out'
-                          }}
-                        />
-                      </div>
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">
+                        {skill.name}
+                      </span>
                     </div>
                   ))}
                 </div>

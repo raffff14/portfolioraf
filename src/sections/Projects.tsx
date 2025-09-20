@@ -90,7 +90,7 @@ export function Projects() {
 
           {/* Graphics and Designs Made */}
           <div className="mt-20">
-            <h3 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">Graphics and Designs Made</h3>
+            <h3 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">BlogPost and Designs Made</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <a href="https://kaizenaire.com/sg/best-alteration-services-in-singapore-tailoring-your-style-with-precision" target="_blank" rel="noopener noreferrer">
                 <img src="/portfolioraf/KoalaAiGeneratedImages-Internship/KoalaAiGeneratedImages-Internship/best_alteration_services_in_singapore.jpg" alt="Best Alteration Services in Singapore" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-200 w-full" />
