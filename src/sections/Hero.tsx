@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronDown, Download, Mail, Users, Award, GraduationCap } from 'lucide-react';
 import { Button } from '../components/Button';
 
 export function Hero() {
+  const [displayedName, setDisplayedName] = useState('');
+  const fullName = 'Rafhael Malabanan';
+  const [isTyping, setIsTyping] = useState(true);
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex < fullName.length) {
+        setDisplayedName(fullName.slice(0, currentIndex + 1));
+        currentIndex++;
+      } else {
+        setIsTyping(false);
+        clearInterval(typingInterval);
+      }
+    }, 150);
+
+    return () => clearInterval(typingInterval);
+  }, []);
+
   const handleScrollToAbout = () => {
     document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -29,7 +48,8 @@ export function Hero() {
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-4">
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Rafhael Malabanan
+                {displayedName}
+                {isTyping && <span className="animate-pulse">|</span>}
               </span>
             </h1>
             
