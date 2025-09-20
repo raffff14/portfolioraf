@@ -62,49 +62,70 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-12 animate-fade-in-delay-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12 animate-fade-in-delay-2">
             {/* Organizations Card */}
-            <div tabIndex={0} className="group bg-white/80 dark:bg-gray-900/80 rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 focus:shadow-2xl focus:-translate-y-1 cursor-pointer outline-none animate-fade-in" aria-label="Organizations">
-              <div className="flex flex-col items-center">
-                <Users className="text-blue-600 dark:text-blue-400 mb-2" size={32} />
-                <div className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-2">Organizations</div>
-                <div className="text-gray-600 dark:text-gray-400 text-sm group-focus:max-h-96 group-hover:max-h-96 max-h-24 overflow-hidden transition-all duration-300">
-                  <ul className="list-disc list-inside text-left mx-auto max-w-xs">
-                  <li><strong>League of Outstanding Programmer</strong><br /><span className="text-xs">Member 2021 – 2024, Angeles, Philippines</span></li>
-                  <li className="mt-2"><strong>Google Developer Student Clubs</strong><br /><span className="text-xs">Member 2021 – 2024, Angeles, Philippines</span></li>
-                </ul>
+            <div className="group bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:scale-105 cursor-pointer border border-gray-200/50 dark:border-gray-700/50">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Users className="text-white" size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  Organizations
+                </h3>
+                <div className="space-y-3 w-full">
+                  <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg p-3 group-hover:from-blue-100 group-hover:to-blue-200 dark:group-hover:from-blue-900/30 dark:group-hover:to-blue-800/30 transition-colors">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm">League of Outstanding Programmer</h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">Member 2021 – 2024</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-500">Angeles, Philippines</p>
+                  </div>
+                  <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg p-3 group-hover:from-blue-100 group-hover:to-blue-200 dark:group-hover:from-blue-900/30 dark:group-hover:to-blue-800/30 transition-colors">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm">Google Developer Student Clubs</h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">Member 2021 – 2024</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-500">Angeles, Philippines</p>
+                  </div>
                 </div>
               </div>
             </div>
+
             {/* Certificates Card */}
-            <div tabIndex={0} className="group bg-white/80 dark:bg-gray-900/80 rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 focus:shadow-2xl focus:-translate-y-1 cursor-pointer outline-none animate-fade-in" aria-label="Certificates">
-              <div className="flex flex-col items-center">
-                <Award className="text-purple-600 dark:text-purple-400 mb-2" size={32} />
-                <div className="text-xl font-bold text-purple-600 dark:text-purple-400 mb-2">Certificates</div>
-                <div className="text-gray-600 dark:text-gray-400 text-sm group-focus:max-h-96 group-hover:max-h-96 max-h-24 overflow-hidden transition-all duration-300">
-                  <ul className="list-disc list-inside text-left mx-auto max-w-xs">
-                  <li>AWS Academy Cloud Foundations</li>
-                  <li>Introduction to Cybersecurity</li>
-                  <li>Cyber Ops Associate</li>
-                  <li>Introduction to IoT</li>
-                  <li>Critical Thinking for More Effective Communication</li>
-                  <li>Advance Python</li>
-                  <li>SQL for Data Analysis</li>
-                  <li>Communication Foundations</li>
-                </ul>
+            <div className="group bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:scale-105 cursor-pointer border border-gray-200/50 dark:border-gray-700/50">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Award className="text-white" size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                  Certificates
+                </h3>
+                <div className="grid grid-cols-2 gap-2 w-full">
+                  {['AWS Academy Cloud Foundations', 'Introduction to Cybersecurity', 'Cyber Ops Associate', 'Introduction to IoT', 'Critical Thinking', 'Advance Python', 'SQL for Data Analysis', 'Communication Foundations'].map((cert, index) => (
+                    <div key={index} className="bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-lg p-2 group-hover:from-purple-100 group-hover:to-purple-200 dark:group-hover:from-purple-900/30 dark:group-hover:to-purple-800/30 transition-colors">
+                      <p className="text-xs font-medium text-gray-900 dark:text-white text-center leading-tight">{cert}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
+
             {/* Education Card */}
-            <div tabIndex={0} className="group bg-white/80 dark:bg-gray-900/80 rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 focus:shadow-2xl focus:-translate-y-1 cursor-pointer outline-none animate-fade-in" aria-label="Education">
-              <div className="flex flex-col items-center">
-                <GraduationCap className="text-emerald-600 dark:text-emerald-400 mb-2" size={32} />
-                <div className="text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">Education</div>
-                <div className="text-gray-600 dark:text-gray-400 text-sm group-focus:max-h-96 group-hover:max-h-96 max-h-24 overflow-hidden transition-all duration-300">
-                  <ul className="list-disc list-inside text-left mx-auto max-w-xs">
-                    <li><strong>Bachelor of Science in Computer Science</strong><br /><span className="text-xs">Holy Angel University, 5x Dean's Lister, 2021 – 2025, Angeles, Philippines</span></li>
-                    <li className="mt-2"><strong>Holy Family Academy</strong><br /><span className="text-xs">2015 – 2021, Angeles, Philippines</span></li>
-                  </ul>
+            <div className="group bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:scale-105 cursor-pointer border border-gray-200/50 dark:border-gray-700/50">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <GraduationCap className="text-white" size={28} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                  Education
+                </h3>
+                <div className="space-y-4 w-full">
+                  <div className="bg-gradient-to-r from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-800/20 rounded-lg p-4 group-hover:from-emerald-100 group-hover:to-emerald-200 dark:group-hover:from-emerald-900/30 dark:group-hover:to-emerald-800/30 transition-colors">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">Bachelor of Science in Computer Science</h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-400 font-medium">Holy Angel University</p>
+                    <p className="text-xs text-emerald-600 dark:text-emerald-400 font-semibold">5x Dean's Lister</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-500">2021 – 2025, Angeles, Philippines</p>
+                  </div>
+                  <div className="bg-gradient-to-r from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-800/20 rounded-lg p-3 group-hover:from-emerald-100 group-hover:to-emerald-200 dark:group-hover:from-emerald-900/30 dark:group-hover:to-emerald-800/30 transition-colors">
+                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm">Holy Family Academy</h4>
+                    <p className="text-xs text-gray-500 dark:text-gray-500">2015 – 2021, Angeles, Philippines</p>
+                  </div>
                 </div>
               </div>
             </div>

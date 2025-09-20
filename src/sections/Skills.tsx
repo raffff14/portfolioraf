@@ -30,6 +30,8 @@ export function Skills() {
       'Vue.js': <Layers className="w-8 h-8" />,
       'Node.js': <Server className="w-8 h-8" />,
       'Python': <Zap className="w-8 h-8" />,
+      'Java': <Code className="w-8 h-8" />,
+      'JavaScript': <Terminal className="w-8 h-8" />,
       'PostgreSQL': <Database className="w-8 h-8" />,
       'MongoDB': <Database className="w-8 h-8" />,
       'GraphQL': <BarChart3 className="w-8 h-8" />,
