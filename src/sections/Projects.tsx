@@ -98,21 +98,39 @@ export function Projects() {
             <p className="text-center text-gray-500 dark:text-gray-400 mt-4">Click any image to view full size. More available on the gallery page.</p>
           </div>
 
-          {/* Graphics and Designs Made */}
+          {/* Infographic Designs Made */}
           <div className="mt-20">
-            <h3 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">BlogPost and Designs Made</h3>
+            <h3 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">Internship Infographic Designs</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <a href="https://kaizenaire.com/sg/best-alteration-services-in-singapore-tailoring-your-style-with-precision" target="_blank" rel="noopener noreferrer">
-                <img src="/portfolioraf/KoalaAiGeneratedImages-Internship/KoalaAiGeneratedImages-Internship/best_alteration_services_in_singapore.jpg" alt="Best Alteration Services in Singapore" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-200 w-full" />
-              </a>
-              <a href="https://kaizenaire.com/sg/best-adventure-brands-in-singapore-explore-thrilling-experiences-and-gear" target="_blank" rel="noopener noreferrer">
-                <img src="/portfolioraf/KoalaAiGeneratedImages-Internship/KoalaAiGeneratedImages-Internship/best_adventure_brands_in_singapore.jpg" alt="Best Adventure Brands in Singapore" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-200 w-full" />
-              </a>
-              <a href="https://kaizenaire.com/sg/best-place-to-buy-window-tint-films-in-singapore-your-go-to-guide-for-quality-and-value" target="_blank" rel="noopener noreferrer">
-                <img src="/portfolioraf/KoalaAiGeneratedImages-Internship/KoalaAiGeneratedImages-Internship/best_place_to_buy_window_tint_films_in_singapore.jpg" alt="Best Place to Buy Window Tint Films in Singapore" className="rounded-lg shadow-md hover:scale-105 transition-transform duration-200 w-full" />
-              </a>
+              <div className="text-center">
+                <img 
+                  src="/portfolioraf/InfoGraphic-Designs/FaceBook-Post.png" 
+                  alt="Facebook Post Infographic" 
+                  className="rounded-lg shadow-md hover:scale-105 transition-transform duration-200 w-full cursor-pointer" 
+                  onClick={() => window.open('/portfolioraf/InfoGraphic-Designs/FaceBook-Post.png', '_blank')}
+                />
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">Facebook Post Design</p>
+              </div>
+              <div className="text-center">
+                <img 
+                  src="/portfolioraf/InfoGraphic-Designs/Twitter-Post.png" 
+                  alt="Twitter Post Infographic" 
+                  className="rounded-lg shadow-md hover:scale-105 transition-transform duration-200 w-full cursor-pointer" 
+                  onClick={() => window.open('/portfolioraf/InfoGraphic-Designs/Twitter-Post .png', '_blank')}
+                />
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">Twitter Post Design</p>
+              </div>
+              <div className="text-center">
+                <img 
+                  src="/portfolioraf/InfoGraphic-Designs/LinkedIn-Post.png" 
+                  alt="LinkedIn Post Infographic" 
+                  className="rounded-lg shadow-md hover:scale-105 transition-transform duration-200 w-full cursor-pointer" 
+                  onClick={() => window.open('/portfolioraf/InfoGraphic-Designs/LinkedIn-Post.png', '_blank')}
+                />
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">LinkedIn Post Design</p>
+              </div>
             </div>
-            <p className="text-center text-gray-500 dark:text-gray-400 mt-4">Click any graphic to view the related blog post.</p>
+            <p className="text-center text-gray-500 dark:text-gray-400 mt-4">Click any infographic to view full size. Professional designs created during my internship at Kaizenaire.</p>
           </div>
         </div>
       </div>
