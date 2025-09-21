@@ -7,12 +7,13 @@ import { Skills } from './sections/Skills';
 import { Projects } from './sections/Projects';
 import { Contact } from './sections/Contact';
 import { Footer } from './sections/Footer';
+import { Routes, Route } from 'react-router-dom';
+import Gallery from './pages/Gallery';
 
 function App() {
   useEffect(() => {
     // Update document title
     document.title = 'Rafhael Malabanan - Full Stack Developer & AI Enthusiast';
-    
     // Add meta tags for SEO
     const metaTags = [
       { name: 'description', content: 'Rafhael Malabanan - Full Stack Developer specializing in React, Node.js, Python, and AI solutions. Building scalable web applications and innovative digital experiences.' },
@@ -25,7 +26,6 @@ function App() {
       { name: 'twitter:title', content: 'Rafhael Malabanan - Full Stack Developer' },
       { name: 'twitter:description', content: 'Full Stack Developer & AI Enthusiast crafting innovative digital solutions.' }
     ];
-
     metaTags.forEach(tag => {
       const existingTag = document.querySelector(`meta[name="${tag.name}"], meta[property="${tag.property}"]`);
       if (existingTag) {
@@ -45,11 +45,18 @@ function App() {
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
         <NavBar />
         <main>
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <Contact />
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Hero />
+                <About />
+                <Skills />
+                <Projects />
+                <Contact />
+              </>
+            } />
+            <Route path="/gallery" element={<Gallery />} />
+          </Routes>
         </main>
         <Footer />
       </div>

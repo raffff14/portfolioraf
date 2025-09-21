@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { projects } from '../data/projects';
 import { ProjectCard } from '../components/ProjectCard';
 import { Button } from '../components/Button';
+import { Link } from 'react-router-dom';
 
 export function Projects() {
   const [filter, setFilter] = useState<string>('All');
@@ -86,12 +87,13 @@ export function Projects() {
               ))}
             </div>
             <div className="flex justify-center mt-6">
-              <a
-                href="/gallery"
+              <Link
+                to="/gallery"
                 className="inline-block px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow hover:from-blue-700 hover:to-purple-700 transition-colors duration-200"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 View All
-              </a>
+              </Link>
             </div>
             <p className="text-center text-gray-500 dark:text-gray-400 mt-4">Click any image to view full size. More available on the gallery page.</p>
           </div>

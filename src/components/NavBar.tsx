@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Code } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
+import { Link, useLocation } from 'react-router-dom';
 
 export function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/#about' },
+    { name: 'Skills', href: '/#skills' },
+    { name: 'Projects', href: '/#projects' },
+    { name: 'Contact', href: '/#contact' }
   ];
 
   useEffect(() => {
@@ -25,8 +27,11 @@ export function NavBar() {
 
   const handleLinkClick = (href: string) => {
     setIsOpen(false);
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    if (href.startsWith('/#')) {
+      // Handle anchor links within the same page
+      const element = document.querySelector(href.substring(1));
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -37,23 +42,32 @@ export function NavBar() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center gap-2">
-            <Code className="text-blue-600 dark:text-blue-400" size={28} />
+          <Link 
+            to="/" 
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
+            <img
+              src="/portfolioraf/ProfilePictureRafhael.jpg"
+              alt="Rafhael Malabanan"
+              className="w-8 h-8 rounded-full object-cover"
+            />
             <span className="text-xl font-bold text-gray-900 dark:text-white">
               Rafhael Malabanan
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.name}
+                to={item.href}
                 onClick={() => handleLinkClick(item.href)}
                 className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium"
               >
                 {item.name}
-              </button>
+              </Link>
             ))}
             <ThemeToggle />
           </div>
@@ -79,13 +93,14 @@ export function NavBar() {
         <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-t border-gray-200 dark:border-gray-700">
           <div className="px-4 py-2 space-y-2">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.name}
+                to={item.href}
                 onClick={() => handleLinkClick(item.href)}
                 className="block w-full text-left px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors duration-200"
               >
                 {item.name}
-              </button>
+              </Link>
             ))}
           </div>
         </div>
