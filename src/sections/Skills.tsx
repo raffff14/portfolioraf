@@ -61,22 +61,32 @@ export function Skills() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="space-y-16">
             {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
-              <div key={category} className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg">
-                <h3 className={`text-xl font-semibold ${categoryColors[category as keyof typeof categoryColors]} mb-6 text-center`}>
+              <div key={category}>
+                <h3 className={`text-2xl font-bold mb-8 ${categoryColors[category as keyof typeof categoryColors]} text-left`}>
                   {categoryTitles[category as keyof typeof categoryTitles]}
                 </h3>
-                
-                <div className="grid grid-cols-2 gap-4">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-y-4 sm:gap-6">
                   {categorySkills.map((skill) => (
-                    <div key={skill.name} className="flex flex-col items-center p-4 rounded-lg bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">
-                      <div className={`${categoryColors[category as keyof typeof categoryColors]} mb-2`}>
-                        {getSkillIcon(skill.name)}
+                    <div
+                      key={skill.name}
+                      className="relative flex flex-col items-center p-4 sm:p-5 rounded-2xl bg-white dark:bg-blue-950 border-2 border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-purple-500 shadow-md hover:shadow-xl transition-all duration-200 group w-full sm:w-auto min-w-[180px] max-w-xs mb-2 sm:mb-0"
+                      style={{ overflow: 'visible' }}
+                    >
+                      <div className="absolute -inset-0.5 rounded-2xl pointer-events-none z-0 bg-gradient-to-r from-blue-400/30 via-purple-400/30 to-orange-400/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="relative z-10 flex flex-col items-center w-full">
+                        <div className={`mb-2 ${categoryColors[category as keyof typeof categoryColors]}`}>{getSkillIcon(skill.name)}</div>
+                        <span className="text-base font-semibold text-gray-800 dark:text-gray-100 text-center">
+                          {skill.name}
+                          {skill.name === 'AI Prompting Engineer' && (
+                            <span className="ml-2 px-2 py-0.5 rounded-full text-xs font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md align-middle">Featured</span>
+                          )}
+                        </span>
+                        <span className="text-xs text-gray-500 dark:text-gray-400 text-center mt-1 mb-2">
+                          {skill.description}
+                        </span>
                       </div>
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">
-                        {skill.name}
-                      </span>
                     </div>
                   ))}
                 </div>

@@ -64,7 +64,7 @@ export function Projects() {
 
           {/* Koala AI Internship Gallery */}
           <div className="mt-20">
-            <h3 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">Koala AI Internship Gallery</h3>
+            <h3 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">AI Prompting Engineering Projects</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 '/portfolioraf/KoalaAiGeneratedImages-Internship/KoalaAiGeneratedImages-Internship/best_adventure_brands_in_singapore.jpg',
@@ -85,7 +85,15 @@ export function Projects() {
                 />
               ))}
             </div>
-            <p className="text-center text-gray-500 dark:text-gray-400 mt-4">Click any image to view full size. More available on request.</p>
+            <div className="flex justify-center mt-6">
+              <a
+                href="/gallery"
+                className="inline-block px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow hover:from-blue-700 hover:to-purple-700 transition-colors duration-200"
+              >
+                View All
+              </a>
+            </div>
+            <p className="text-center text-gray-500 dark:text-gray-400 mt-4">Click any image to view full size. More available on the gallery page.</p>
           </div>
 
           {/* Graphics and Designs Made */}
