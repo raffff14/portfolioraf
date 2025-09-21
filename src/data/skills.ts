@@ -126,6 +126,13 @@ export const skills: Skill[] = [
     category: 'tools',
     description: 'Data visualization platform for business intelligence and analytics.',
   },
+
+  {
+    name: 'PhotoShop',
+    level: 55,
+    category: 'tools',
+    description: 'Graphic design and photo editing tool for creating, enhancing, and retouching visual content.',
+  },
   // AI Prompting Engineer (Kaizenaire)
   {
     name: 'AI Prompting Engineer',

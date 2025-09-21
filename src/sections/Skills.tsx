@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Database, Cloud, Palette, Terminal, Globe, Layers, Zap, BarChart3, FileSpreadsheet, Table, GitBranch, Container, Server, Figma, Monitor } from 'lucide-react';
+import { Code, Database, Cloud, Palette, Terminal, Globe, Layers, Zap, BarChart3, FileSpreadsheet, Table, GitBranch, Container, Server, Figma, Monitor, Image } from 'lucide-react';
 import { skills } from '../data/skills';
 
 export function Skills() {
@@ -42,7 +42,8 @@ export function Skills() {
       'VS Code': <Monitor className="w-8 h-8" />,
       'Power BI': <BarChart3 className="w-8 h-8" />,
       'Excel': <FileSpreadsheet className="w-8 h-8" />,
-      'Tableau': <Table className="w-8 h-8" />
+      'Tableau': <Table className="w-8 h-8" />,
+      'PhotoShop': <Image className="w-8 h-8" />
     };
     return iconMap[skillName] || <Code className="w-8 h-8" />;
   };

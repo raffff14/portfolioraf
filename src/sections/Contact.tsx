@@ -47,7 +47,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900 dark:text-white">Phone</p>
-                    <p className="text-gray-600 dark:text-gray-400">09917113982 (Dito SIM), 09626714832 (Smart)</p>
+                    <p className="text-gray-600 dark:text-gray-400">+63 9917113982 (Dito SIM), +63 9626714832 (Smart)</p>
                   </div>
                 </div>
 
