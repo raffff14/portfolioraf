@@ -37,7 +37,12 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900 dark:text-white">Email</p>
-                    <p className="text-gray-600 dark:text-gray-400">rafhaelmalabanan1@gmail.com</p>
+                    <a
+                      href="mailto:rafhaelmalabanan1@gmail.com"
+                      className="text-blue-600 dark:text-blue-400 underline"
+                    >
+                      rafhaelmalabanan1@gmail.com
+                    </a>
                   </div>
                 </div>
 

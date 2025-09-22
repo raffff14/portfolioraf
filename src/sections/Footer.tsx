@@ -1,5 +1,4 @@
-import React from 'react';
-import { Github, Linkedin, Twitter, Mail, Heart, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
 export function Footer() {
   const socialLinks = [
@@ -8,9 +7,7 @@ export function Footer() {
     { name: 'Email', href: 'mailto:rafhaelmalabanan1@gmail.com', icon: Mail }
   ];
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  
 
   return (
     <footer className="bg-gray-900 text-white py-12 relative">
@@ -81,14 +78,6 @@ export function Footer() {
             <p className="text-gray-400 flex items-center gap-1">
               © 2025 Rafhael Malabanan. Made with <Heart size={16} className="text-red-500" /> using React & Tailwind CSS
             </p>
-            
-            <button
-              onClick={scrollToTop}
-              className="mt-4 md:mt-0 w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors duration-200"
-              aria-label="Scroll to top"
-            >
-              <ArrowUp size={20} />
-            </button>
           </div>
         </div>
       </div>

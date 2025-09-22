@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import { NavBar } from './components/NavBar';
 import { Hero } from './sections/Hero';
@@ -8,6 +8,7 @@ import { Experience } from './sections/Experience';
 import { Projects } from './sections/Projects';
 import { Contact } from './sections/Contact';
 import { Footer } from './sections/Footer';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import { Routes, Route } from 'react-router-dom';
 import Gallery from './pages/Gallery';
 
@@ -60,6 +61,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </main>
+        <ScrollToTopButton />
         <Footer />
       </div>
     </ThemeProvider>
