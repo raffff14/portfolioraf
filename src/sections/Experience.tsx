@@ -106,7 +106,7 @@ export function Experience() {
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-orange-500"></div>
             
             <div className="space-y-8">
-              {timeline.map((item, index) => {
+              {[...timeline].reverse().map((item, index) => {
                 const colors = getColorClasses(item.color, item.type);
                 const isLast = index === timeline.length - 1;
                 
